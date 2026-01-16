@@ -9,8 +9,8 @@
             --nexus-blue: #2563eb;
             --sidebar-bg: #0f172a;
             --text-muted: #94a3b8;
-            --status-active: #86efac;
-            --nav-inactive: #64748b;
+            --status-active: #157A3A;
+            --nav-inactive: #ffffff;
             --error-red: #f87171;
         }
         *:focus { outline: none !important; }
@@ -45,7 +45,7 @@
     <aside>
         <div class="brand">NEXUS_CONTROL</div>
         <div style="padding: 1rem 2rem;">
-            <input type="text" placeholder="Search clusters...">
+            <input type="text" placeholder="Search clusters..." aria-label="search-cluster">
         </div>
         <div class="nav-links">
             <div class="nav-link active" onclick="route('dash', event)">Dashboard</div>
@@ -80,7 +80,7 @@
             <div id="p-step-2" class="step-panel">
                 <h3>Resource Mapping</h3>
                 <div class="form-group">
-                    <input type="text" placeholder="Shard ID">
+                    <input type="text" placeholder="Shard ID" aria-label="shard-id">
                 </div>
                 <button class="btn btn-primary" onclick="finish('Deployment')">Execute</button>
             </div>
@@ -92,7 +92,7 @@
             <span class="close-trigger" onclick="closeAll()">×</span>
             <h3>Identity Access Request</h3>
             <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                <input type="checkbox">
+                <input type="checkbox" aria-label="root-access-checkbox">
                 <span>Elevated Root Access</span>
             </div>
             <div class="form-group">
